@@ -1,0 +1,70 @@
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Serif:600.css');
+
+@import 'colors.less';
+
+.app-root-2023-sdg_costing .app {
+  background-color: @unorange;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  .container {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin: auto auto auto auto;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+    width: 600px;
+    .content {
+      background-color: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,.2);
+      height: 100%;
+      overflow: hidden;
+      padding: 20px;
+      width: 100%;
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+      .number {
+        color: @unbluetext;
+        font-size: 30px;
+        font-weight: 600;
+        position: relative;
+        &.number_1 {
+          left: -400px;
+          &.visible {
+            left: 0;
+          }
+        }
+        &.number_2 {
+          left: 400px;
+          &.visible {
+            left: 0;
+            transition-delay: 3s;
+          }
+        }
+        &.number_1,
+        &.number_2 {
+          &.visible {
+            transition-duration: 3s;
+            transition-property: left;
+          }
+        }
+        &.number_3 {
+          opacity: 0;
+          &.visible {
+            opacity: 1;
+            transition-delay: 6s;
+            transition-property: opacity;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import 'basics.less';
