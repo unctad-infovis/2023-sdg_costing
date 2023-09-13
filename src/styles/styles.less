@@ -22,44 +22,79 @@
       padding: 20px;
       width: 600px;
       h2 {
-        margin: 0;
+        font-size: 40px;
+        margin: 0 0 20px 0;
         padding: 0;
       }
       h3 {
         margin: 0;
         padding: 0;
       }
-      .number {
-        color: @unbluetext;
-        font-size: 30px;
-        font-weight: 600;
-        position: relative;
-        &.number_1 {
-          left: -400px;
-          &.visible {
-            left: 0;
+      .number_container {
+        margin-bottom: 10px;
+        .number {
+          color: @unbluetext;
+          font-size: 30px;
+          font-weight: 600;
+          position: relative;
+          &.number_1 {
+            left: -500px;
+            &.visible {
+              left: 0;
+            }
+          }
+          &.number_2 {
+            left: 500px;
+            &.visible {
+              left: 0;
+              transition-delay: 3s;
+            }
+          }
+          &.number_1,
+          &.number_2 {
+            &.visible {
+              transition-duration: 3s;
+              transition-property: left;
+            }
           }
         }
-        &.number_2 {
-          left: 400px;
-          &.visible {
-            left: 0;
-            transition-delay: 3s;
-          }
-        }
-        &.number_1,
-        &.number_2 {
-          &.visible {
-            transition-duration: 3s;
-            transition-property: left;
-          }
-        }
-        &.number_3 {
+        .round_up {
           opacity: 0;
           &.visible {
             opacity: 1;
-            transition-delay: 6s;
+            transition-delay: 3s;
             transition-property: opacity;
+          }
+        }
+      }
+      .legend_container {
+        margin-bottom: 5px;
+        .legend_item {
+          display: inline-block;
+          margin: 0 10px;
+          text-transform: uppercase;
+          color: #222;
+          letter-spacing: 0.02em;
+          font-weight: 600;
+          font-size: 14px;
+          .legend_icon {
+            display: inline-block;
+            background-color: @ungrey;
+            height: 6px;
+            width: 6px;
+            border-color: @ungrey;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 2px;
+            margin-right: 5px;
+            &.target {
+              background-color: @unred;
+              border-color: @unred;
+            }
+            &.current {
+              background-color: @unblue;
+              border-color: @unblue
+            }
           }
         }
       }
@@ -70,7 +105,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: left;
-        margin: auto auto 20px auto;
+        margin: auto auto 5px auto;
         max-width: 900px;
         width: 100%;
         .dot {
@@ -80,16 +115,16 @@
           border: 0;
           cursor: pointer;
           display: inline-flex;
-          font-size: 0;
-          height: 38px;
+          height: 12px;
           justify-content: center;
-          margin: 2px;
+          margin: 4px;
           position: relative;
-          width: 38px;
+          width: 12px;
           transition: transform 0.2s ease-in-out;
           span {
             background-color: #fff;
-            border-color: @unblue;
+            background-color: @ungrey;
+            border-color: @ungrey;
             border-radius: 50%;
             border-style: solid;
             border-width: 2px;
@@ -102,11 +137,23 @@
             pointer-events: none;
             position: absolute;
             z-index: 1;
-            &.red {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            line-height: 11px;
+            &.current {
+              border-color: @unblue;
+              background-color: @unblue;
+            }
+            &.target {
+              border-color: @unred;
               background-color: @unred;
             }
           }
         }
+      }
+      .note_container {
+        color: #222;
+        font-size: 13px;
       }
     }
   }
