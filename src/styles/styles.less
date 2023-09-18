@@ -1,11 +1,83 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Serif:600,700.css');
 @import 'colors.less';
-
+.app-root-2023-sdg_costing.app-root-2023-sdg_costing_pathway .app {
+  .app_container {
+    align-items: start;
+    .background_ring {
+      display: none;
+    }
+    .content {
+      padding: 0 10px 0 0;
+      z-index: 1;
+      h2 {
+        display: none;
+      }
+      .intro {
+        color: #454545;
+        font-size: 13px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      @media all and (min-width: 769px) {
+        height: auto
+      }
+      .number_container {
+        margin-bottom: 15px;
+        max-width: 100%;
+        &.right {
+          text-align: left;
+        }
+        h3 {
+          color: #000;
+          font-size: 24px;
+        }
+        .extra {
+          color: #454545;
+          font-size: 15px;
+        }
+        .dots_container {
+          float: left;
+          width: 100%;
+          .dots {
+            display: none;
+            justify-content: left;
+          }
+        }
+        &.share_gdp {
+          .extra {
+            display: block;
+          }
+        }
+        .number.share_gdp {
+          justify-content: flex-start;
+        }
+        .number {
+          &.total_cost {
+           .value {
+              display: inline-block;
+              margin-right: 5px;
+              font-size: 60px;
+              line-height: 60px;
+            }
+            .unit {
+              font-size: 24px;
+              line-height: 28px;
+              text-align: left;
+            }
+          }
+        }
+      }
+      .show_more_container {
+        display: none;
+      }
+    }
+  }
+}
 .app-root-2023-sdg_costing .app {
   box-sizing: border-box;
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 200px 0;
-  .container {
+  padding: 0 10px;
+  .app_container {
     align-items: center;
     background-color: transparent;
     box-sizing: border-box;
@@ -13,9 +85,7 @@
     flex-direction: column;
     justify-content: center;
     margin: auto auto auto auto;
-    min-height: 100vh;
     text-align: center;
-    text-shadow: 1px 1px 1px #eee; 
     width: 100%;
     .background_ring {
       background-color: #fff;
@@ -23,7 +93,7 @@
       height: 670px;
       opacity: 0.9;
       position: absolute;
-      max-width: 670px;
+      max-width: 620px;
       width: 100%;
       z-index: 2;
       @media all and (max-width: 768px) {
@@ -36,14 +106,15 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      max-width: 500px;
+      max-width: 600px;
       padding: 20px 20px 20px 20px;
       position: relative;
       width: 100%;
       z-index: 3;
       @media all and (min-width: 769px) {
         background-color: transparent;
-        padding: 20px 20px 20px 20px;
+        height: 670px;
+        padding: 30px 20px 20px 20px;
       }
       h2 {
         color: @unbluetext;
@@ -59,15 +130,16 @@
       .intro {
         color: #666;
         font-size: 15px;
-        margin: 0 0 40px 0;
+        margin: 0 0 30px 0;
         text-transform: uppercase;
       }
       .number_container {
-        margin: 0 0 20px 0;
-        width: 100%;
+        margin: 0 auto 20px auto;
+        max-width: 500px;
+        opacity: 0;
         transition-duration: 3s;
         transition-property: opacity;
-        opacity: 0;
+        width: 100%;
         &.total_cost {
           &.visible {
             opacity: 1;
@@ -79,6 +151,9 @@
           &.visible {
             opacity: 1;
             transition-delay: 1.5s;
+          }
+          .extra {
+            display: none;
           }
         }
         &.gap {
@@ -102,7 +177,7 @@
           text-align: right;
         }
         .number {
-          color: @ungreentext;
+          color: @unbluetext;
           font-weight: 600;
           &.total_cost {
             display: flex;
@@ -174,7 +249,7 @@
               position: relative;
               width: 35px;
               .dot_wrapper {
-                background-color: #e6efd0;
+                background-color: #009edb;
                 border-radius: 10px;
                 display: inline-block;
                 height: 0;
@@ -187,7 +262,7 @@
                 }
                 &.share {
                   span {
-                    background-color: @ungreen;
+                    background-color: #004987;
                     float: left;
                     opacity: 0;
                     transition-delay: 1s;
@@ -213,9 +288,9 @@
         transition-property: opacity;
         width: 100%;
         @media all and (min-width: 769px) {
+          bottom: -50px;
+          left: 100px;
           position: absolute;
-          bottom: -70px;
-          left: 60px;
         }
         &.visible {
           opacity: 1;
@@ -224,7 +299,7 @@
           display: inline-block;
           a {
             background-color: @ungreen;
-            border-radius: 50%;
+            border-radius: 40px;
             border: 4px solid #fff;
             color: #fff;
             display: table-cell;
@@ -242,9 +317,9 @@
             text-transform: uppercase;
             text-decoration: none;
             &:hover {
-              background-color: rgba(84, 138, 153, 1);
+              background-color: @unblue;
+              border-color: @unblue;
               cursor: pointer;
-              text-decoration: underline;
             }
           }
         }

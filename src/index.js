@@ -16,6 +16,7 @@ if (containerPathway1) {
       percentage_min={1}
       percentage_rest={74}
       share_gdp={17.4}
+      share_gdp_explaner="It reaches an average 45% for the six least developed countries in the study."
       total_cost={5386}
       url="/sdg-costing/social-protection"
     />
@@ -29,11 +30,12 @@ if (containerPathway2) {
   rootPathway2.render(
     <App
       gap={274.5}
-      gap_explaner="The six least developed countries and the 19 low and lower-middle-income economies face the largest relative gaps."
+      gap_explaner="The six least developed countries and the 19 low and lower-middle-income economies face the largest gaps relative to the total annual costs"
       per_person={1300}
       percentage_min={1}
       percentage_rest={91}
       share_gdp={19.1}
+      share_gdp_explaner="It reaches 47% for the six least developed countries in the study."
       total_cost={5937}
       url="/sdg-costing/education-transformation"
     />
@@ -52,6 +54,7 @@ if (containerPathway3) {
       percentage_min={1}
       percentage_rest={98}
       share_gdp={19.8}
+      share_gdp_explaner="It reaches an average 46% for the six least developed countries in the study."
       total_cost={6127}
       url="/sdg-costing/food-systems"
     />
@@ -70,6 +73,7 @@ if (containerPathway4) {
       percentage_min={1}
       percentage_rest={78}
       share_gdp={17.8}
+      share_gdp_explaner="It reaches an average 40% for the six least developed countries in the study."
       total_cost={5536}
       url="/sdg-costing/climate-change"
     />
@@ -88,6 +92,7 @@ if (containerPathway5) {
       percentage_min={1}
       percentage_rest={87}
       share_gdp={18.7}
+      share_gdp_explaner="It reaches an average 46% for the six least developed countries in the study."
       total_cost={5805}
       url="/sdg-costing/energy-transition"
     />
@@ -106,6 +111,7 @@ if (containerPathway6) {
       percentage_min={1}
       percentage_rest={81}
       share_gdp={18.1}
+      share_gdp_explaner="It reaches an average 45% for the six least developed countries in the study."
       total_cost={5620}
       url="/sdg-costing/digitalization"
     />
@@ -124,6 +130,7 @@ if (containerPathway7) {
       percentage_min={2}
       percentage_rest={5}
       share_gdp={20.5}
+      share_gdp_explaner="It reaches an average 44% for the eight small island developing states and 42% of GDP for the six least developed countries in the study."
       total_cost={6364}
       url="/sdg-costing/gender-equality"
     />

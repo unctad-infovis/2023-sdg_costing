@@ -27,6 +27,7 @@ function App({
   percentage_min,
   percentage_rest,
   share_gdp,
+  share_gdp_explaner,
   total_cost,
   url
 }) {
@@ -56,7 +57,7 @@ function App({
   };
   return (
     <div className="app" ref={appRef}>
-      <div className="container">
+      <div className="app_container">
         <div className="background_ring" />
         <div className="content">
           <h2>How much will it cost?</h2>
@@ -91,7 +92,6 @@ function App({
                     <div className="dots">
                       {
                         Array(parseInt(10, 10)).fill().map((el, i) => <div key={uuidv4()} className="dot"><span className={`dot_wrapper ${(i < (percentage_min + 1)) ? 'share' : ''}`}><span className={(isVisible) ? 'visible' : ''} style={{ width: (i === percentage_min) ? `${percentage_rest}%` : '100%' }} /></span></div>)
-
                       }
                       {
                         isVisible && visualiseDots()
@@ -105,7 +105,7 @@ function App({
                         collective GDP
                       </span>
                     </div>
-                    <div className="extra" />
+                    <div className="extra">{share_gdp_explaner}</div>
                   </div>
                 </div>
                 <div className={`number_container left gap ${(isVisible) ? 'visible' : ''}`}>
@@ -149,6 +149,7 @@ App.propTypes = {
   percentage_min: PropTypes.number.isRequired,
   percentage_rest: PropTypes.number.isRequired,
   share_gdp: PropTypes.number.isRequired,
+  share_gdp_explaner: PropTypes.string.isRequired,
   total_cost: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired
 };
