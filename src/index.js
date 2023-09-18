@@ -11,7 +11,7 @@ if (containerPathway1) {
   rootPathway1.render(
     <App
       gap={293.7}
-      gap_explaner="The eight small island developing states in the study face the largest relative gap at $3.3 billion."
+      gap_explaner="The eight small island developing states in the study face the largest gap relative to the total annual costs."
       per_person={1179}
       percentage_min={1}
       percentage_rest={74}
@@ -29,7 +29,7 @@ if (containerPathway2) {
   rootPathway2.render(
     <App
       gap={274.5}
-      gap_explaner="The six least developed countries face the largest relative gap at $8.1 billion."
+      gap_explaner="The six least developed countries and the 19 low and lower-middle-income economies face the largest relative gaps."
       per_person={1300}
       percentage_min={1}
       percentage_rest={91}
@@ -47,12 +47,12 @@ if (containerPathway3) {
   rootPathway3.render(
     <App
       gap={327.8}
-      gap_explaner="The 29 upper-middle and high-income economies in the study face the largest relative annual gap at $309 billion."
+      gap_explaner="The 29 upper-middle and high-income developing economies in the study face the largest gap relative to the total annual costs."
       per_person={1342}
       percentage_min={1}
       percentage_rest={98}
       share_gdp={19.8}
-      total_cost={6127.2}
+      total_cost={6127}
       url="/sdg-costing/food-systems"
     />
   );
@@ -64,13 +64,13 @@ if (containerPathway4) {
   const rootPathway4 = createRoot(containerPathway4);
   rootPathway4.render(
     <App
-      gap={352.3}
-      gap_explaner="The 29 upper-middle and high-income developing economies in the study face the largest relative gap at $327 billion."
-      per_person={1251}
+      gap={337.4}
+      gap_explaner="The 29 upper-middle and high-income developing economies in the study face the largest gap relative to the total annual costs."
+      per_person={1213}
       percentage_min={1}
-      percentage_rest={85}
-      share_gdp={18.5}
-      total_cost={5753.7}
+      percentage_rest={78}
+      share_gdp={17.8}
+      total_cost={5536}
       url="/sdg-costing/climate-change"
     />
   );
@@ -83,12 +83,12 @@ if (containerPathway5) {
   rootPathway5.render(
     <App
       gap={286.1}
-      gap_explaner="The 29 upper-middle and high-income countries in the study face the largest relative gap at $281 billion."
+      gap_explaner="The 29 upper-middle and high-income developing economies in the study face the largest gap relative to the total annual costs."
       per_person={1271}
       percentage_min={1}
       percentage_rest={87}
       share_gdp={18.7}
-      total_cost={5804.7}
+      total_cost={5805}
       url="/sdg-costing/energy-transition"
     />
   );
@@ -101,7 +101,7 @@ if (containerPathway6) {
   rootPathway6.render(
     <App
       gap={468.6}
-      gap_explaner="The 29 upper-middle and high-income developing economies in the study face the largest relative gap at $430 billion."
+      gap_explaner="The 29 upper-middle and high-income developing economies in the study face the largest gap relative to the total annual costs."
       per_person={1231}
       percentage_min={1}
       percentage_rest={81}
@@ -119,7 +119,7 @@ if (containerPathway7) {
   rootPathway7.render(
     <App
       gap={360.4}
-      gap_explaner="The eight small island developing states face the largest relative gap at $14.9 billion."
+      gap_explaner="The eight small island developing states face the largest gap relative to the total annual costs."
       per_person={1383}
       percentage_min={2}
       percentage_rest={5}

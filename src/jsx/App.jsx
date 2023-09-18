@@ -59,7 +59,7 @@ function App({
       <div className="container">
         <div className="background_ring" />
         <div className="content">
-          <h2>How much it costs</h2>
+          <h2>How much will it cost?</h2>
           <div className="intro">Figures include data for 48 developing economies</div>
           <IsVisible once>
             {(isVisible) => (
