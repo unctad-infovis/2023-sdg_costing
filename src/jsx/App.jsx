@@ -154,7 +154,4 @@ App.propTypes = {
   url: PropTypes.string.isRequired
 };
 
-App.defaultProps = {
-};
-
 export default App;
